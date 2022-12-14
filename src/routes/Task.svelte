@@ -42,7 +42,7 @@
         console.log(msg);
       }
     };
-
+    //LOOK AT THIS METHOD. THIS IS THE BROKEN ONE
     const sendMail = async() => {
         const reader = new FileReader();
         reader.onload = (e) => {
