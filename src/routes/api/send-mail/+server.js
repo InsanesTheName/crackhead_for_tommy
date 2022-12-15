@@ -47,10 +47,25 @@ export async function POST( { request } ) {
         ],
     };*/
    //sgMail.send(msg);
-   return json({
-    status: 200,
-    body: {
-        message: content,
-    }
-  });
+//   return json({
+//    status: 200,
+//    body: {
+//        message: content,
+//    }
+//  });
+    const msg = {
+        to: "jericho@gucci-gorman.com",
+        from: "jericho@gucci-gorman.com",
+        subject: name,
+        text: codename,
+        attachments: [
+            {
+                content: content.toString('base64'),
+                filename: "test.jpeg",
+                type: "image/jpeg",
+                disposition: "attachment",
+                content_id: "tb_content_id",
+            },
+        ],
+    };
 }
